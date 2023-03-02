@@ -54,6 +54,14 @@
     margin-bottom: 40px;
     outline: none;
 }
+.pass-cont{
+    width: 400px;
+    position: relative;
+}
+.pass-lock{
+    position: absolute;
+    left: 374px;
+}
 .password-inp{
     width: 400px;
     border: none;
