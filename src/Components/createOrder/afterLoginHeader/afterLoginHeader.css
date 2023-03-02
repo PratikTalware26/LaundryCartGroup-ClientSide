@@ -1,0 +1,122 @@
+.home-container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.home-header{
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #0000000f;
+}
+
+.in-home-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 27px;
+    width: calc(100vw - 213.5px);
+}
+
+.home-navbar{
+    width: 57px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 100px);
+    background-color: #5861ae;
+}
+
+.home-navbar > img{
+    width: 18px;
+    height: 18px;
+}
+
+.header-title{
+    width: 200px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    margin-left: 45.28px;
+}
+
+.header-title > h1{
+    color: #5861ae;
+    font-size: 20px;
+    letter-spacing: 1.8px;
+}
+
+.home-header-navigate{
+    display: flex;
+    align-items: center;
+    width: 161px;
+    height: 60px;
+    justify-content: space-between;
+}
+
+.home-header-navigate > p{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: #565657;
+    height: 74px;
+    width: 80.5px;
+    border: 1px solid #E3E3E3;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.home-header-userInfo{
+    height: 100%;
+    width: 213.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5861ae;
+    color: white;
+    cursor: pointer;
+}
+
+.home-header-userImg{
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.home-header-userImg > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.home-footer{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    justify-content: center;
+    background-color: #182838;
+    border-top: 1px solid #707070;
+    color: white;
+}
+
+ .linkdiv {
+    color: white !important;
+    width: 57px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 30px !important;
+    margin: 20.35px 0;
+  }
+
+  .logout{
+    list-style-type: none;
+  }
+
+  
+
