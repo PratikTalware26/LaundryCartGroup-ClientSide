@@ -1,0 +1,82 @@
+.reg-cont{
+    display: flex;
+    justify-content: space-evenly;
+}
+.reg-inp-cont{
+    display: flex;
+    column-gap: 50px;
+}
+.reg-leftside{
+    width: 30%;
+    padding: 50px 30px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+.reg-logo{
+    font: normal normal 900 62px/80px 'Poppins', sans-serif;
+    letter-spacing: 2.48px;
+    color: #5861AE;
+    margin-top: 160px;
+}
+.reg-desc{
+    font: normal normal normal 20px/32px 'Poppins', sans-serif;
+    letter-spacing: 0.8px;
+    color: #565657;
+}
+.account{
+    font: normal normal normal 16px/26px 'Poppins', sans-serif;
+    letter-spacing: 0.64px;
+    color: #565657;
+    margin-bottom: 14px;
+}
+.reg-signin-btn{
+    width: 150px;
+    height: 50px;
+    border: 2px solid #5861AE;
+    border-radius: 4px;
+    color: #5861AE;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+.reg-signinbtn-cont{
+    margin-top: 70px;
+}
+.reg-rightside{
+    width: 70%;
+    padding: 30px;
+    background: #F8F9FF 0% 0% no-repeat padding-box;
+}
+.reg-rightside-head{
+    font: normal normal 400 32px/60px 'Poppins', sans-serif;
+    letter-spacing: 1.28px;
+    color: #5861AE;
+}
+.reg-inp-cont div{
+    
+}
+.reg-inp-cont input{
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 20px 0;
+    outline: none;
+    margin-bottom: 12px;
+}
+.agree-check{
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.agree{
+    text-decoration: underline;
+    font: normal normal normal 14px/20px 'Poppins', sans-serif;
+    letter-spacing: 0.49px;
+    color: #5861AE;
+}
+.reg-registerbtn{
+    width: 150px;
+    height: 50px;
+    border: none;
+    background: #5861AE 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    color: white;
+}

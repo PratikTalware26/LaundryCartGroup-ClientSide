@@ -4,7 +4,7 @@ import "./App.css";
 import Createorder from "./components/createOrder/createorder/createorder";
 import CreateOrderLanding from "./components/createOrder/landingPage/landingPage";
 import PastOrder from "./components/pastOrder/pastOrderList/pastOrderPage";
-//mport SignInPage from "./components/SignIn/SignInPage";
+import SignInPage from "./components/SignIn/SignInPage";
 export const tokenstorage = createContext();
 
 function App() {
@@ -14,7 +14,8 @@ function App() {
       <tokenstorage.Provider value={[token, settoken]}>
         <BrowserRouter>
           <Routes>
-            {/* <Route path="/" element={<SignInPage/>}/> */}
+            <Route path="/" element={<SignInPage />} />
+            <Route path="/register" element={<RegisterPage />} />
             <Route path="/home" element={<CreateOrderLanding />} />
             <Route path="/createorder" element={<Createorder />} />
             <Route path="/pastorders" element={<PastOrder />} />
