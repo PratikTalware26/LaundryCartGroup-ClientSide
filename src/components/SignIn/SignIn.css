@@ -1,0 +1,93 @@
+.signin-cont{
+    display: flex;
+    justify-content: space-evenly;
+    background: #B9C0FD1A 0% 0% no-repeat padding-box;
+}
+.signin-left-side{
+    width: 50%;
+    padding: 100px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+.signin-right-side{
+    width: 50%;
+    padding: 100px;
+}
+.signin-logo{
+    color: #5861AE;
+    font: normal normal 900 100px/120px 'Poppins', sans-serif;
+}
+.desc-one{
+    color: #565657;
+    letter-spacing: 0.8px;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 26px;
+}
+.desc-two{
+    letter-spacing: 0.64px;
+    color: #565657;
+    margin-top: 60px;
+    font-size: 16px;
+    line-height: 26px;
+}
+.reg-btn{
+    width: 150px;
+    height: 50px;
+    letter-spacing: 0.3px;
+    color: #4552C1;
+    border: 2px solid #4552C1;
+    border-radius: 4px;
+    background: #FFFFFF;
+    margin-top: 16px;
+}
+.right-signin{
+    font: normal normal 900 32px/60px 'Poppins', sans-serif;
+    letter-spacing: 1.28px;
+    color: #4552C1;
+    margin-bottom: 35px;
+}
+.email-mobile-inp{
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding-bottom: 16px;
+    margin-bottom: 40px;
+    outline: none;
+}
+.pass-cont{
+    width: 400px;
+    position: relative;
+}
+.pass-lock{
+    position: absolute;
+    left: 374px;
+}
+.password-inp{
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding-bottom: 16px;
+    outline: none;
+    background: #B9C0FD1A 0% 0% no-repeat padding-box;
+}
+.forgot-pass{
+    width: 400px;
+    font: normal normal normal 16px/26px 'Poppins', sans-serif;
+    letter-spacing: 0.64px;
+    color: #4552C1;
+    text-align: right;
+    margin-top: 16px;
+}
+.signin-btn{
+    width: 150px;
+    height: 50px;
+    color: white;
+    background: #4552C1 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 4px;
+}
+.signin-btn-cont{
+    width: 400px;
+    margin-top: 50px;
+    text-align: center;
+}
