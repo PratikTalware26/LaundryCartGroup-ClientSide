@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./SignIn.css";
-import Lock from "../../Assets/padlock.svg"
+import Lock from "../../assets/padlock.svg"
 import {useForm} from "react-hook-form"
 import axios from "axios"
 import {Link, Navigate} from "react-router-dom"

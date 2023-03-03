@@ -2,11 +2,11 @@ import React, { createContext, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
-import Createorder from "./Components/createOrder/createorder/createorder";
-import CreateOrderLanding from "./Components/createOrder/landingPage/landingPage";
-import PastOrder from "./Components/pastOrder/pastOrderList/pastOrderPage";
-import Register from "./Components/SignIn/Register";
-import SignInPage from "./Components/SignIn/SignInPage"
+import Createorder from "./components/createOrder/createorder/createorder";
+import CreateOrderLanding from "./components/createOrder/landingPage/landingPage";
+import PastOrder from "./components/pastOrder/pastOrderList/pastOrderPage";
+import Register from "./components/SignIn/Register";
+import SignInPage from "./components/SignIn/SignInPage"
 export const tokenstorage = createContext();
 
 function App() {
