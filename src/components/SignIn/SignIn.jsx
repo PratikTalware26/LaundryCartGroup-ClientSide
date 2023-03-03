@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./SignIn.css";
-import Lock from "../../assets/padlock.svg"
+import Lock from "../../Assets/padlock.svg"
 import {useForm} from "react-hook-form"
 import axios from "axios"
 import {Link, Navigate} from "react-router-dom"
@@ -19,7 +19,7 @@ const SignIn = () => {
     const fetchSigninUser=async ()=>{
       try {
         await axios.post("http://localhost:8081/login", data).then((res)=>{
-        console.log(res);
+        // console.log(res);
         settoken(res.data.token);
       }).catch((e)=>{
         console.log(e.message)

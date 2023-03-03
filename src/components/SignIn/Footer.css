@@ -21,7 +21,7 @@
   justify-content: space-evenly;
   padding: 16px;
   /* background: transparent url('../../Assets/Footer.svg') 0% 0% no-repeat padding-box; */
-  background: url("../../assets/Footer.svg");
+  background: url("../../Assets/Footer.svg");
   background-size: cover;
   background-repeat: no-repeat;
 }

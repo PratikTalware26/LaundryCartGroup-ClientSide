@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import userImg from "../../../assets/userImg.png";
-import homeIcon from "../../../assets/home-run (1).svg";
-import more from "../../../assets/more.svg";
-import list from "../../../assets/list.svg";
+import userImg from "../../../Assets/userImg.png";
+import homeIcon from "../../../Assets/home-run (1).svg";
+import more from "../../../Assets/more.svg";
+import list from "../../../Assets/list.svg";
 import { tokenstorage } from "../../../App";
 import "./afterLoginHeader.css";
 import { faList } from "@fortawesome/free-solid-svg-icons";

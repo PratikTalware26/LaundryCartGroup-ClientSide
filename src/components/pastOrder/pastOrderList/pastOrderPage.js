@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import "./pastOrderPage.css";
-import searchIcon from "../../../assets/search.svg";
-import eye from "../../../assets/eye-solid.svg";
+import searchIcon from "../../../Assets/search.svg";
+import eye from "../../../Assets/eye-solid.svg";
 import PastOrderSummary from "../pastOrderSummary/pastOrderSummary";
 import CancelOrder from "../cancelOrder/cancelOrder";
 import { tokenstorage } from "../../../App";

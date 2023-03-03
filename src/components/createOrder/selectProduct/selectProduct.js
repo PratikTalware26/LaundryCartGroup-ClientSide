@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./selectProduct.css";
-import washingmachine_onselect from "../../../assets/washing-machine.svg";
-import washingmachine from "../../../assets/washing-machine.svg";
-import iron_select from "../../../assets/ironing-onselect.svg";
-import ironing from "../../../assets/ironing.svg";
-import towel_select from "../../../assets/towel.svg";
-import towel_icon from "../../../assets/towel.svg";
-import bleach_icon_select from "../../../assets/bleach-onselect.svg"
-import bleach_icon from "../../../assets/bleach.svg";
+import washingmachine_onselect from "../../../Assets/washing-machine.svg";
+import washingmachine from "../../../Assets/washing-machine.svg";
+import iron_select from "../../../Assets/ironing-onselect.svg";
+import ironing from "../../../Assets/ironing.svg";
+import towel_select from "../../../Assets/towel.svg";
+import towel_icon from "../../../Assets/towel.svg";
+import bleach_icon_select from "../../../Assets/bleach-onselect.svg"
+import bleach_icon from "../../../Assets/bleach.svg";
 
 
 export default function SelectProduct({

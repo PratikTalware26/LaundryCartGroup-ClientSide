@@ -7,7 +7,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { tokenstorage } from "../../../App";
 import { useContext } from "react";
 import AfterLoginHeader from "../afterLoginHeader/afterLoginHeader";
-import searchicon from "../../../assets/search.svg";
+import searchicon from "../../../Assets/search.svg";
 
 export default function Createorder() {
   const [token, settoken] = useContext(tokenstorage);
