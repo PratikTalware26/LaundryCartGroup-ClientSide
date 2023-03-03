@@ -1,8 +1,8 @@
 import React from 'react'
 import "./Footer.css"
-import Facebook from "../../Assets/facebook.svg"
-import Instagram from "../../Assets/instagram.svg"
-import Linkedin from "../../Assets/linkedin.svg"
+import Facebook from "../../assets/facebook.svg"
+import Instagram from "../../assets/instagram.svg"
+import Linkedin from "../../assets/linkedin.svg"
 
 const Footer = () => {
   return (
