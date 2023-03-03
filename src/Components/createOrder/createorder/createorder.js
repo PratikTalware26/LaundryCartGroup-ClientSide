@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./createorder.css";
-import SearchImg from '../../../assets/search.svg';
+import SelectProduct from "../selectProduct/selectProduct";
 import Summary from "../summary/Summary";
 import Sucessmodal from "../Ordersuccess/Sucessmodal";
 import { Navigate, useNavigate } from "react-router-dom";
 import { tokenstorage } from "../../../App";
 import { useContext } from "react";
-import SelectProduct from "../selectProduct/selectProduct";
 import AfterLoginHeader from "../afterLoginHeader/afterLoginHeader";
+import searchicon from "../../../assets/search.svg";
 
 export default function Createorder() {
   const [token, settoken] = useContext(tokenstorage);
@@ -19,8 +19,6 @@ export default function Createorder() {
     Trousers: {},
     Boxers: {},
   };
-
-  
   const navigate = useNavigate();
   const [render, setRender] = useState(0);
   const [products, setProducts] = useState([]);
@@ -38,7 +36,7 @@ export default function Createorder() {
   };
   const handleProceed = () => {
     setShow(!show);
-    fetch("http://localhost:8081/userDetails", {
+    fetch("http://localhost:8081/UserDetails", {
       headers: {
         authtoken: token,
       },
@@ -47,13 +45,13 @@ export default function Createorder() {
       .then((data) => setuserData(data));
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetch("http://localhost:8081/")
       .then((resp) => resp.json())
       .then((data) => setProducts(data));
   }, []);
-  const x = 5;
-  if (x==5) {
+  const x=5;
+  if (x===5) {
     return (
       <>
         <AfterLoginHeader />
@@ -62,7 +60,7 @@ export default function Createorder() {
             <div className="createorder__upperbar">
               <h2>Create order</h2>
               <div className="searchbar__div">
-                <img src={SearchImg} alt="search"></img>{" "}
+                <img src={searchicon} alt="search"></img>{" "}
                 <input className="searchbar" type={"text"}></input>
               </div>
             </div>
@@ -113,8 +111,7 @@ export default function Createorder() {
   } else {
     return (
       <>
-        {/* <Navigate to="/" /> */}
-        hi
+        <Navigate to="/" />
       </>
     );
   }

@@ -6,6 +6,8 @@ import more from "../../../assets/more.svg";
 import list from "../../../assets/list.svg";
 import { tokenstorage } from "../../../App";
 import "./afterLoginHeader.css";
+import { faList } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AfterLoginHeader=()=>{
     const [token, settoken] = useContext(tokenstorage)
@@ -44,8 +46,9 @@ const AfterLoginHeader=()=>{
                     <Link className="linkdiv" to={"/createOrder"}>
                         <img src={more} alt="more" />
                     </Link>
-                    <Link className="linkdiv" to={"/pastOrder"}>
-                        <img src={list} alt="list" />
+                    <Link className="linkdiv" to={"/pastorders"}>
+                        {/* <img style={{backgroundColor:"white"}} src={list} alt="list" /> */}
+                        <FontAwesomeIcon icon={faList} />
                     </Link> 
                 </nav>
 
