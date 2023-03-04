@@ -55,7 +55,7 @@ const SignIn = () => {
         <div>
           <p className="desc-two">Don't Have An Account ?</p>
           <Link to="/register">
-          <button className="reg-btn">Register</button>
+          <button className="reg-btn" style={{cursor:"pointer"}}>Register</button>
           </Link>
         </div>
       </div>
@@ -77,7 +77,7 @@ const SignIn = () => {
             <img className="pass-lock" src={Lock} alt="pass-lock-logo" />
           </div>
           <p className="forgot-pass">Forget Password ?</p>
-          <div className="signin-btn-cont"><button className="signin-btn" type="submit">Sign In</button></div>
+          <div className="signin-btn-cont"><button className="signin-btn" type="submit" style={{cursor:"pointer"}}>Sign In</button></div>
         </form>
       </div>
     </div>
