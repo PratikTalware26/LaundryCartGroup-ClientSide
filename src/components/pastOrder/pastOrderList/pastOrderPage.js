@@ -34,7 +34,7 @@ const PastorderPage = () => {
   };
 
   const gettingData = async () => {
-    await fetch("http://localhost:8081/getOrder", {
+    await fetch("https://git-code-shiva-laundry-cart-backend.onrender.com/getOrder", {
       headers: { authtoken: token },
     })
       .then((res) => res.json())
@@ -45,7 +45,7 @@ const PastorderPage = () => {
     setCounter(counter + 1);
     try {
       console.log(orderId);
-      await fetch(`http://localhost:8081/deleteOrder/${orderId}`, {
+      await fetch(`https://git-code-shiva-laundry-cart-backend.onrender.com/deleteOrder/${orderId}`, {
         method: "DELETE",
         headers: {
           authtoken: token,
@@ -70,7 +70,7 @@ const PastorderPage = () => {
   const changeHandler = (id) => {
     setVisible(!Visible);
     setorderId(id);
-    fetch(`http://localhost:8081/order/${id}`, {
+    fetch(`https://git-code-shiva-laundry-cart-backend.onrender.com/order/${id}`, {
       method: "GET",
       headers: {
         authtoken: token,

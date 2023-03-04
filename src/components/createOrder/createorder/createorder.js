@@ -36,7 +36,7 @@ export default function Createorder() {
   };
   const handleProceed = () => {
     setShow(!show);
-    fetch("http://localhost:8081/UserDetails", {
+    fetch("https://git-code-shiva-laundry-cart-backend.onrender.com/UserDetails", {
       headers: {
         authtoken: token,
       },
@@ -46,7 +46,7 @@ export default function Createorder() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8081/")
+    fetch("https://git-code-shiva-laundry-cart-backend.onrender.com/")
       .then((resp) => resp.json())
       .then((data) => setProducts(data));
   }, []);

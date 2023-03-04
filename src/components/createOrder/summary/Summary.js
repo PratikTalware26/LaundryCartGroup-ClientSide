@@ -49,7 +49,7 @@ const Summary=({
       };
       setsucess(true);
       setShow(false);
-      fetch("http://localhost:8081/postorder", {
+      fetch("https://git-code-shiva-laundry-cart-backend.onrender.com/postorder", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

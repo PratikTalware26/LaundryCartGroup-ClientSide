@@ -19,7 +19,7 @@ const Register = () => {
     // console.log(data)
     const userRegisterFetch = async () => {
       try {
-        await axios.post("http://localhost:8081/register", data);
+        await axios.post("https://git-code-shiva-laundry-cart-backend.onrender.com/register", data);
         navigate("/");
 
       } catch (error) {
