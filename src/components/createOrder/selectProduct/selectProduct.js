@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./selectProduct.css";
-import washingmachine_onselect from "../../../assets/washing-machine.svg";
+import washingmachine_onselect from "../../../assets/washing-machine-onselect.svg";
 import washingmachine from "../../../assets/washing-machine.svg";
 import iron_select from "../../../assets/ironing-onselect.svg";
 import ironing from "../../../assets/ironing.svg";
-import towel_select from "../../../assets/towel.svg";
+import towel_select from "../../../assets/towel-onselect.svg";
 import towel_icon from "../../../assets/towel.svg";
 import bleach_icon_select from "../../../assets/bleach-onselect.svg"
 import bleach_icon from "../../../assets/bleach.svg";

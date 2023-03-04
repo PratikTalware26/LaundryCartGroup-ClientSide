@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./summary.css";
+import tick from "../../../assets/check-solid.svg"
+import { tokenstorage } from "../../../App";
 
-export default function Summary({
+
+const Summary=({
   isVisible,
   handleProceed,
   handlesucess,
@@ -9,22 +12,28 @@ export default function Summary({
   setShow,
   setsucess,
   userDetails,
-}) {
-  const [location, setLocation] = useState("store location");
+})=> {
 
-  var totalPrice = 0;
-  var totalQuantity = 0;
+  // const [orderName, setOrderName] = useState({});
+  // const [ops_type, setOpsType] = useState("");
+  const [location, setLocation] = useState("store location");
+  const [token,settoken] = useContext(tokenstorage);
+
+
+  let totalPrice = 0;
+  let totalQuantity = 0;
 
   Object.keys(customerorder).map((item) => {
     if (customerorder[item].quantity > 0) {
-      var singleproductPrice =
+      let singleproductPrice =
         customerorder[item].quantity * customerorder[item].totalPrice;
       totalPrice += singleproductPrice;
       totalQuantity += parseInt(customerorder[item].quantity);
     }
   });
 
-  const handleConfirm = () => {
+  const handleConfirm = (e) => {
+    e.preventDefault();
     if (location === "store location") {
       alert("Please select a location");
     } else {
@@ -35,6 +44,8 @@ export default function Summary({
         totalPrice: totalPrice,
         totalQuantity: totalQuantity,
         Address: `${userDetails.State} ${userDetails.District} ${userDetails.Adress} ${userDetails.Pincode}`,
+        // itemName: orderName,
+        // ops_type:ops_type,
       };
       setsucess(true);
       setShow(false);
@@ -42,16 +53,13 @@ export default function Summary({
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          authtoken: token
         },
         body: JSON.stringify(customerorder),
       });
     }
   };
 
-  const selectAddress = () => {
-    const address = document.getElementsByClassName("summary__address");
-    address[0].classList.toggle("summary__address--active");
-  };
 
   if (isVisible) {
     return (
@@ -60,7 +68,7 @@ export default function Summary({
           <header className="summary__header">
             <div className="summary__header__innnerdiv">
               <h1>Summary</h1>
-              <i onClick={handleProceed} class="fa-solid fa-xmark fa-2xl"></i>
+              <i onClick={handleProceed} class="fa-solid fa-xmark fa-2xl">X</i>
             </div>
           </header>
           <nav className="summary__storeselector">
@@ -73,9 +81,9 @@ export default function Summary({
                 }}
               >
                 <option value="store location">Store Location</option>
-                <option value="shadnagar">Shadnagar</option>
-                <option value="warangal">Karimnagar</option>
-                <option value="karimnagar">warangal</option>
+                <option value="noida">Noida</option>
+                <option value="banglore">banglore</option>
+                <option value="kolkata">kolkata</option>
               </select>
             </form>
             <div className="summary__storeselector__address">
@@ -84,7 +92,7 @@ export default function Summary({
                 <p>-</p>
               ) : (
                 <>
-                  <p>Near jntuh,xyz complex</p>
+                  <p>Delhi, anand bihar</p>
                 </>
               )}
             </div>
@@ -116,6 +124,9 @@ export default function Summary({
                         {customerorder[item].quantity} x{" "}
                         {customerorder[item].totalPrice} ={" "}
                       </h3>
+
+
+                      
                       <h3 className="summary__mainPrice">
                         {customerorder[item].totalPrice *
                           customerorder[item].quantity}
@@ -149,14 +160,15 @@ export default function Summary({
           <div className="summary__address__container">
             <h4>Address</h4>
             <div
-              onClick={selectAddress}
+              // onClick={selectAddress}
               className="summary__address summary__address--active"
             >
-              <img src="images/tick.svg" alt="tick"></img>
+              <img src={tick} alt="tick"></img>
               <h3>Home</h3>
               <p>
-                {userDetails.State},{userDetails.District},{userDetails.Adress},
-                {userDetails.Pincode}
+                {/* {userDetails.State},{userDetails.District},{userDetails.Adress},
+                {userDetails.Pincode} */}
+                Noida, Alpha1 C23
               </p>
             </div>
           </div>
@@ -171,3 +183,5 @@ export default function Summary({
     return null;
   }
 }
+
+export default Summary;
