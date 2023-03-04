@@ -1,19 +1,22 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import userImg from "../../../assets/userImg.png";
 import homeIcon from "../../../assets/home-run (1).svg";
 import more from "../../../assets/more.svg";
-import list from "../../../assets/list.svg";
+// import list from "../../../assets/list.svg";
 import { tokenstorage } from "../../../App";
 import "./afterLoginHeader.css";
 import { faList } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AfterLoginHeader=()=>{
+    const navigate= useNavigate()
     const [token, settoken] = useContext(tokenstorage)
     const logout=()=>{
         settoken(null);
+        localStorage.clear()
     }
+    if(token){
     return(
         <>
             <div className="home-container">
@@ -57,7 +60,9 @@ const AfterLoginHeader=()=>{
                 </footer>
             </div>
         </>
-    )
+    )}else{
+        navigate("/")
+    }
 }
 
 export default AfterLoginHeader;

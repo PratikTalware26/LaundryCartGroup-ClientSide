@@ -2,13 +2,13 @@ import React from "react";
 import "./Sucessmodal.css";
 import { Link } from "react-router-dom";
 
-export default function Sucessmodal({ isVisible, setsucess }) {
+const Sucessmodal=({ isVisible, setsucess })=> {
   if (isVisible) {
     return (
       <div className="successmodal__container">
         <div className="successmodal__messagediv">
           <div className="success__tick">
-            <i style={{ color: "#5861AE" }} class="fa-solid fa-check fa-5x"></i>
+            {/* <i style={{ color: "#5861AE" }} class="fa-solid fa-check fa-5x"></i> */}
           </div>
           <div className="sucess__message">
             <h3>Your order is successfully placed</h3>
@@ -17,7 +17,10 @@ export default function Sucessmodal({ isVisible, setsucess }) {
             <p>You can track the delivery in the "orders" section</p>
           </div>
           <Link to="/pastorders">
+
+            <div style={{textAlign:"center"}}>
             <button
+            style={{alignItems:"center"}}
               onClick={() => {
                 setsucess(false);
               }}
@@ -25,6 +28,9 @@ export default function Sucessmodal({ isVisible, setsucess }) {
             >
               Go to orders
             </button>
+
+            </div>
+            
           </Link>
         </div>
       </div>
@@ -33,3 +39,5 @@ export default function Sucessmodal({ isVisible, setsucess }) {
     return null;
   }
 }
+
+export default Sucessmodal;

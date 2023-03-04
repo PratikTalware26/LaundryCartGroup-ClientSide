@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./createorder.css";
 import SelectProduct from "../selectProduct/selectProduct";
 import Summary from "../summary/Summary";
@@ -45,13 +45,13 @@ export default function Createorder() {
       .then((data) => setuserData(data));
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetch("http://localhost:8081/")
       .then((resp) => resp.json())
       .then((data) => setProducts(data));
   }, []);
-  const x=5;
-  if (x===5) {
+  // const x=5;
+  if (token) {
     return (
       <>
         <AfterLoginHeader />

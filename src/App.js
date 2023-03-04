@@ -3,9 +3,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Createorder from "./components/createOrder/createorder/createorder";
 import CreateOrderLanding from "./components/createOrder/landingPage/landingPage";
-import PastOrder from "./components/pastOrder/pastOrderList/pastOrderPage";
-import Register from "./components/SignIn/Register";
+import PastorderPage from "./components/pastOrder/pastOrderList/pastOrderPage";
+// import PastOrder from "./components/pastOrder/pastOrderList/pastOrderPage";
 import SignInPage from "./components/SignIn/SignInPage";
+import RegisterPage from "./components/SignIn/RegisterPage";
 
 export const tokenstorage = createContext();
 
@@ -17,10 +18,10 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<SignInPage />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/register" element={<RegisterPage />} />
             <Route path="/home" element={<CreateOrderLanding />} />
             <Route path="/createorder" element={<Createorder />} />
-            <Route path="/pastorders" element={<PastOrder />} />
+            <Route path="/pastorders" element={<PastorderPage />} />
           </Routes>
         </BrowserRouter>
       </tokenstorage.Provider>

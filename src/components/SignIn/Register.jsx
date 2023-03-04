@@ -2,9 +2,13 @@ import React from "react";
 import "./Register.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const Register = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -16,15 +20,21 @@ const Register = () => {
     const userRegisterFetch = async () => {
       try {
         await axios.post("http://localhost:8081/register", data);
+        navigate("/");
+
       } catch (error) {
         console.log(error.message);
+        toast.error("Email already exists. Please input other email or try to signIn !");
+        // alert("Email already exists. Please input other email or try to signIn !");
       }
     };
     userRegisterFetch();
   };
 
   return (
+    
     <div className="reg-cont">
+      <ToastContainer />
       <div className="reg-leftside">
         <h1 className="reg-logo">
           Laundry

@@ -5,6 +5,9 @@ import {useForm} from "react-hook-form"
 import axios from "axios"
 import {Link, Navigate} from "react-router-dom"
 import { tokenstorage } from "../../App";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const SignIn = () => {
   const [token, settoken] = useContext(tokenstorage);
@@ -21,8 +24,13 @@ const SignIn = () => {
         await axios.post("http://localhost:8081/login", data).then((res)=>{
         console.log(res);
         settoken(res.data.token);
+        localStorage.setItem("Name", res.data.userData.Name);
+        localStorage.setItem("city", res.data.userData.District);
+        localStorage.setItem("phone", res.data.userData.Phone);
+        localStorage.setItem("address", res.data.userData.Address)
       }).catch((e)=>{
         console.log(e.message)
+        toast.error("Please input valid credentials or register !");
       })
       } catch (error) {
         console.log(error.message)
@@ -36,6 +44,7 @@ const SignIn = () => {
       <Navigate to="/home"></Navigate>
     ):(
     <div className="signin-cont">
+            <ToastContainer />
       <div className="signin-left-side">
         <h1 className="signin-logo">
           Laundry
