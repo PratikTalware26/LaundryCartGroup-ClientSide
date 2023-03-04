@@ -21,6 +21,12 @@ const SignIn = () => {
         await axios.post("http://localhost:8081/login", data).then((res)=>{
         console.log(res);
         settoken(res.data.token);
+        localStorage.setItem("Name", res.data.userData.Name);
+        localStorage.setItem("city", res.data.userData.District);
+        localStorage.setItem("phone", res.data.userData.Phone);
+        localStorage.setItem("address", res.data.userData.Address);
+
+
       }).catch((e)=>{
         console.log(e.message)
       })

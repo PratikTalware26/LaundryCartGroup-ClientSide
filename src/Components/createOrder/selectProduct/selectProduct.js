@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./selectProduct.css";
-import washingmachine_onselect from "../../../assets/washing-machine.svg";
+import washingmachine_onselect from "../../../assets/washing-machine-onselect.svg";
 import washingmachine from "../../../assets/washing-machine.svg";
 import iron_select from "../../../assets/ironing-onselect.svg";
 import ironing from "../../../assets/ironing.svg";
-import towel_select from "../../../assets/towel.svg";
+import towel_select from "../../../assets/towel-onselect.svg";
 import towel_icon from "../../../assets/towel.svg";
 import bleach_icon_select from "../../../assets/bleach-onselect.svg"
 import bleach_icon from "../../../assets/bleach.svg";
@@ -98,7 +98,7 @@ export default function SelectProduct({
 						<img
 							alt="product"
 							className="product"
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBwrJPgC5sXEWlAYTjfHHi9kx99U8_kUdSufnt8fNn&s"
+							src={image}
 						></img>
 						<div className="single__productdetails">
 							<h3>{name}</h3>
