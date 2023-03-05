@@ -22,6 +22,8 @@ const Summary=({
 
   let totalPrice = 0;
   let totalQuantity = 0;
+  let prName;
+  let washType;
 
   Object.keys(customerorder).map((item) => {
     if (customerorder[item].quantity > 0) {
@@ -29,14 +31,19 @@ const Summary=({
         customerorder[item].quantity * customerorder[item].totalPrice;
       totalPrice += singleproductPrice;
       totalQuantity += parseInt(customerorder[item].quantity);
+      prName = customerorder[item].name;
+      washType= customerorder[item].washtype;
     }
   });
 
-  const handleConfirm = (e) => {
+  const handleConfirm = async(e) => {
     e.preventDefault();
     if (location === "store location") {
       alert("Please select a location");
     } else {
+
+      console.log(customerorder);
+
       customerorder = {
         ...customerorder,
         userId: userDetails._id,
@@ -46,10 +53,14 @@ const Summary=({
         Address: `${userDetails.State} ${userDetails.District} ${userDetails.Adress} ${userDetails.Pincode}`,
         // itemName: orderName,
         // ops_type:ops_type,
+        prName:prName,
+        washType:washType,
+
+        
       };
       setsucess(true);
       setShow(false);
-      fetch("https://git-code-shiva-laundry-cart-backend.onrender.com/postorder", {
+      await fetch("https://git-code-shiva-laundry-cart-backend.onrender.com/postorder", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -88,13 +99,24 @@ const Summary=({
             </form>
             <div className="summary__storeselector__address">
               <h3>Store Address:</h3>
-              {location === "store location" ? (
+            
+               {/* {location === "store location" ? (
                 <p>-</p>
               ) : (
                 <>
                   <p>Delhi, anand bihar</p>
                 </>
-              )}
+              )}  */}
+
+              {location==="store location"?(
+                <p>-</p>
+              ): location ==="noida"?(
+                <p>aplha 1</p>
+              ): location ==="banglore"?(
+                <p>cyber city</p>
+              ):location==="kolkata"?(
+                <p>hawda</p>
+              ):(<p>anand bihar</p>)}
             </div>
             <div className="summary__storeselector__phone">
               <h3>Phone no:</h3>

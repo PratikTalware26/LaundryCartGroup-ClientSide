@@ -4,23 +4,28 @@ import "./CancelAlert.css";
 // import x_mark from "../../../assets/xmark-solid.svg"
 import danger from "../../../assets/triangle-exclamation-solid.svg";
 
-const CancelOrder=({ popup, closeAlert, deleteOrder })=> {
+const CancelOrder = ({ popup, closeAlert, deleteOrder }) => {
   if (popup) {
     return (
       <>
-    
         <div className="whole">
           <div className="CancelAlert-div">
             <div className="Alert-head">
-              Alert <i style={{cursor:"pointer"}} onClick={closeAlert} class="fa-solid fa-xmark fa-xl"><img src={""}></img>X</i>
+              Alert{" "}
+              <i
+                style={{ cursor: "pointer" }}
+                onClick={closeAlert}
+                class="fa-solid fa-xmark fa-xl"
+              >
+                <img src={""}></img>X
+              </i>
             </div>
             {/* <i class="fa-thin fa-xmark"></i> */}
             <div className="remaining-part">
               <div className="traingle">
-                <i
-                  className="i"
-                  class="fa-solid fa-triangle-exclamation fa-2xl"
-                ><img src={danger} /></i>
+                <i>
+                  <img src={danger} />
+                </i>
               </div>
               <div className="alert-proceed">
                 <div className="Alert-msg">
@@ -40,6 +45,6 @@ const CancelOrder=({ popup, closeAlert, deleteOrder })=> {
   } else {
     return null;
   }
-}
+};
 
 export default CancelOrder;

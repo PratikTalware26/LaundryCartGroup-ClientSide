@@ -15,7 +15,7 @@ export default function SelectProduct({
 	description,
 	image,
 	customerorder,
-	render,
+	// render,
 }) {
 	const [quantity, setQuantity] = useState(0);
 	const [wash, setWash] = useState(false);
@@ -80,7 +80,7 @@ export default function SelectProduct({
 		setBleach(false);
 		setDry(false);
 		setIron(false);
-	}, [render]);
+	}, []);
 
 	const handleReset = () => {
 		setQuantity(0);

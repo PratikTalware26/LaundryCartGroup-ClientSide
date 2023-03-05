@@ -44,7 +44,7 @@ const PastorderPage = () => {
   const deleteOrder = async() => {
     setCounter(counter + 1);
     try {
-      console.log(orderId);
+      // console.log(orderId);
       await fetch(`https://git-code-shiva-laundry-cart-backend.onrender.com/deleteOrder/${orderId}`, {
         method: "DELETE",
         headers: {

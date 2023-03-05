@@ -24,7 +24,7 @@ const  PastOrderSummary=({
             <nav className="summary__storeselector">
               <div className="summary_StoreSelector__leftdiv">
                 <h4>Store location</h4>
-                <p>{customerorder.location}</p>
+                {/* <p>{customerorder}</p> */}
                 <p>Banglore</p>
               </div>
               <div>
@@ -51,15 +51,15 @@ const  PastOrderSummary=({
               <div className="summary__heading">
                 <h2>Order details</h2>
               </div>
-              {/* {console.log(customerorder)}; */}
+              {console.log(customerorder)};
               {Object.keys(customerorder).map((item) => {
                 if (customerorder[item] > 0) {
                   return (
                     <div className="summary__orderdetails">
-                      <h1>{customerorder[item].name}</h1>
-                      <h1>jeans,shirt</h1>
-                      <p>{customerorder[item].washtype}</p>
-                      <p>drying</p>
+                      <h1>{customerorder.prName}</h1>
+                      {/* <h1>jeans,shirt</h1> */}
+                      <p>{customerorder.washType}</p>
+                      {/* <p>drying</p> */}
 
                       <div className="summary__pricediv">
                         <h3 className="summary__priceparticulars">
