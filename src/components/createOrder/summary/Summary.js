@@ -60,7 +60,7 @@ const Summary=({
       };
       setsucess(true);
       setShow(false);
-      await fetch("https://git-code-shiva-laundry-cart-backend.onrender.com/postorder", {
+      await fetch("https://laundrycartgroup-serverside.onrender.com/postorder", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -21,7 +21,7 @@ const SignIn = () => {
     // console.log(data)
     const fetchSigninUser=async ()=>{
       try {
-        await axios.post("https://git-code-shiva-laundry-cart-backend.onrender.com/login", data).then((res)=>{
+        await axios.post("https://laundrycartgroup-serverside.onrender.com/login", data).then((res)=>{
         console.log(res);
         settoken(res.data.token);
         localStorage.setItem("Name", res.data.userData.Name);
